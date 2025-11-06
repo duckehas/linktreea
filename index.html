@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Professional LinkTree</title>
+  <style>
+    :root {
+      --bg-color: #000;
+      --panel-color: rgba(20,20,20,0.8);
+      --border: rgba(255,255,255,0.1);
+      --text: #f5f5f7;
+      --twitch: #9146FF;
+      --kick: #53FC18;
+      --discord: #5865F2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Display", sans-serif;
+      color: var(--text);
+      overflow: hidden;
+    }
+
+    /* Subtle animated background */
+    .bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(#ffffff10 1px, transparent 1px),
+        linear-gradient(120deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 60px 60px, 120px 120px;
+      animation: move 40s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes move {
+      from { background-position: 0 0, 0 0; }
+      to { background-position: 120px 120px, 240px 240px; }
+    }
+
+    /* Main glass panel */
+    .panel {
+      position: relative;
+      z-index: 1;
+      width: 420px;
+      background: var(--panel-color);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 48px 50px;
+      text-align: center;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.8);
+      backdrop-filter: blur(30px) saturate(1.4);
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 1.7rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 28px;
+      color: rgba(255,255,255,0.65);
+    }
+
+    /* Button styling */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--text);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 14px 20px;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(8px);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+    }
+
+    .btn:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.18);
+      transform: translateY(-1px);
+    }
+
+    .btn span {
+      font-size: 0.95rem;
+    }
+
+    /* Accent colors on hover */
+    .btn.twitch:hover { border-color: var(--twitch); color: var(--twitch); }
+    .btn.kick:hover { border-color: var(--kick); color: var(--kick); }
+    .btn.discord:hover { border-color: var(--discord); color: var(--discord); }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    @media (max-width: 480px) {
+      .panel { width: 90%; padding: 36px 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+
+  <main class="panel">
+    <h1>duckey5656</h1>
+    <p>Creator • Streamer • Professional</p>
+
+    <div class="links">
+      <a class="btn twitch" href="https://www.twitch.tv/duckey661" target="_blank">
+        <span>Twitch</span><span>→</span>
+      </a>
+      <a class="btn kick" href="https://kick.com/duckey5656" target="_blank">
+        <span>Kick</span><span>→</span>
+      </a>
+      <a class="btn discord" href="https://discord.gg/cFAWFrUN" target="_blank">
+        <span>Discord</span><span>→</span>
+      </a>
+    </div>
+
+    <footer>© 2025 • Engine6.0</footer>
+  </main>
+</body>
+</html>
+
